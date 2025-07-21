@@ -1,0 +1,17 @@
+{% extends "testimonials/base.html" %}
+
+{% block content %}
+  <article>
+    <h2>{{ testimonial.title }}</h2>
+    <p><strong>By:</strong> {{ testimonial.user.username }}</p>
+    <p><strong>Posted on:</strong> {{ testimonial.created_on|date:"F j, Y" }}</p>
+
+    {% if testimonial.image %}
+      <img src="{{ testimonial.image.url }}" alt="Photo for {{ testimonial.title }}" style="max-width: 400px;">
+    {% endif %}
+
+    <p>{{ testimonial.content }}</p>
+
+    <a href="{% url 'testimonial_list' %}">&larr; Back to all testimonials</a>
+  </article>
+{% endblock %}
