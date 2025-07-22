@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Testimonial
 from .forms import TestimonialForm
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 def testimonial_list(request):
     testimonials = Testimonial.objects.filter(approved=True)
@@ -19,6 +20,7 @@ def add_testimonial(request):
             testimonial = form.save(commit=False)
             testimonial.user = request.user
             testimonial.save()
+            messages.success(request, 'Your testimonial was submitted and is awaiting approval.')
             return redirect('testimonial_list')
     else:
         form = TestimonialForm()
