@@ -59,3 +59,42 @@ footer {
     color: #777;
     font-size: 0.9rem;
 }
+
+/* Testimonial List */
+ul.testimonials {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.testimonials li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+ul.testimonials li:last-child {
+    border-bottom: none;
+}
+
+/* Flash Messages */
+.messages {
+    list-style: none;
+    padding: 0; 
+    margin: 20px;
+}
+
+.messages li {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.messages li.success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.messages li.error {
+    background-color: #f8d7da;
+    color: #842029;
+}
