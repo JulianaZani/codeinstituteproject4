@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Testimonial
 from .forms import TestimonialForm
+from django.contrib.auth.decorators import login_required
 
 def testimonial_list(request):
     testimonials = Testimonial.objects.filter(approved=True)
@@ -9,3 +10,16 @@ def testimonial_list(request):
 def testimonial_detail(request, pk):
     testimonial = get_object_or_404(Testimonial, pk=pk, approved=True)
     return render(request, 'testimonials/testimonial_detail.html', {'testimonial': testimonial})
+
+@login_required
+def add_testimonial(request):
+    if request.method == 'POST':
+        form = TestimonialForm(request.POST, request.FILES)
+        if form.is_valid():
+            testimonial = form.save(commit=False)
+            testimonial.user = request.user
+            testimonial.save()
+            return redirect('testimonial_list')
+    else:
+        form = TestimonialForm()
+    return render(request, 'testimonials/add_testimonial.html', {'form': form})
