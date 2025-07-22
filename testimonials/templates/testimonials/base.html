@@ -1,32 +1,44 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <title>Volunteer Testimonials</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
     <header>
-      <h1><a href="/">Volunteer Testimonials</a></h1>
-      <nav></nav>
+        <h1><a href="{% url 'testimonial_list' %}">Volunteer Testimonials</a></h1>
+
+        <nav>
+            {% if user.is_authenticated %}
+                <p>Hello, {{ user.username }} | 
+                <a href="{% url 'logout' %}">Logout</a> | 
+                <a href="{% url 'add_testimonial' %}">Submit Testimonial</a></p>
+            {% else %}
+                <a href="{% url 'login' %}">Login</a> |
+                <a href="{% url 'signup' %}">Sign Up</a>
+            {% endif %}
+        </nav>
     </header>
 
     <main>
-      {% if user.is_authenticated %}
-      <p>
-        Bem-vindo, {{ user.username }} | <a href="{% url 'logout' %}">Logout</a>
-      </p>
-      {% else %}
-      <a href="{% url 'login' %}">Login</a> |
-      <a href="{% url 'signup' %}">Cadastrar-se</a>
-      {% endif %} {% block content %} {% endblock %}
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        
+        {% block content %}
+        {% endblock %}
     </main>
 
     <footer>
-      <p>&copy; 2025 Volunteer Project</p>
+        <p>&copy; 2025 Volunteer Project</p>
     </footer>
-  </body>
+</body>
 </html>
