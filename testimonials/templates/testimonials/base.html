@@ -1,28 +1,32 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Volunteer Testimonials</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
     <header>
-        <h1><a href="/">Volunteer Testimonials</a></h1>
-        <nav>
-        </nav>
+      <h1><a href="/">Volunteer Testimonials</a></h1>
+      <nav></nav>
     </header>
 
     <main>
-        {% block content %}
-        {% endblock %}
+      {% if user.is_authenticated %}
+      <p>
+        Bem-vindo, {{ user.username }} | <a href="{% url 'logout' %}">Logout</a>
+      </p>
+      {% else %}
+      <a href="{% url 'login' %}">Login</a> |
+      <a href="{% url 'signup' %}">Cadastrar-se</a>
+      {% endif %} {% block content %} {% endblock %}
     </main>
 
     <footer>
-        <p>&copy; 2025 Volunteer Project</p>
+      <p>&copy; 2025 Volunteer Project</p>
     </footer>
-</body>
+  </body>
 </html>
-
