@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import SignUpForm
+from django.contrib.auth import login
 
-# Create your views here.
+def signup_view(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)  # Login automático
+            return redirect('testimonial_list')
+    else:
+        form = SignUpForm()
+    return render(request, 'accounts/signup.html', {'form': form})
