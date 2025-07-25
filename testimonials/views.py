@@ -1,27 +1,16 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Testimonial
-from .forms import TestimonialForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django import forms
-
-
-# Contact form definition
-class ContactForm(forms.Form):
-    name = forms.CharField(max_length=100, label='Your Name')
-    email = forms.EmailField(label='Your Email')
-    message = forms.CharField(widget=forms.Textarea, label='Your Message')
-
+from .models import Testimonial
+from .forms import TestimonialForm
 
 def testimonial_list(request):
     testimonials = Testimonial.objects.filter(approved=True)
     return render(request, 'testimonials/testimonial_list.html', {'testimonials': testimonials})
 
-
 def testimonial_detail(request, pk):
     testimonial = get_object_or_404(Testimonial, pk=pk, approved=True)
     return render(request, 'testimonials/testimonial_detail.html', {'testimonial': testimonial})
-
 
 @login_required
 def add_testimonial(request):
@@ -37,10 +26,8 @@ def add_testimonial(request):
         form = TestimonialForm()
     return render(request, 'testimonials/add_testimonial.html', {'form': form})
 
-
 def contact_view(request):
-    form = ContactForm(request.POST or None)
-    if request.method == 'POST' and form.is_valid():
-        messages.success(request, "Thank you for contacting us!")
-        return redirect('contact')
-    return render(request, 'contact.html', {'form': form})
+    if request.method == 'POST':
+        # You could handle contact form logic here later
+        return render(request, 'contact.html', {'success': True})
+    return render(request, 'contact.html')
