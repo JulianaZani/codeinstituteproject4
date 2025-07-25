@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from cloudinary.models import CloudinaryField
 
 class Testimonial(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -15,3 +15,7 @@ class Testimonial(models.Model):
 
     def __str__(self):
         return f"{self.title} by {self.user.username}"
+
+class Testimonial(models.Model):
+    # ...
+    image = CloudinaryField('image', blank=True, null=True)
