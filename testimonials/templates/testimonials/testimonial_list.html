@@ -2,14 +2,16 @@
 
 {% block content %}
   <h1>Testimonials</h1>
-  <ul>
-    {% for testimonial in testimonials %}
-      <li>
-        <a href="{% url 'testimonial_detail' testimonial.pk %}">{{ testimonial.title }}</a>
-        <p>{{ testimonial.content|truncatewords:20 }}</p>
-      </li>
-    {% empty %}
-      <li>No testimonials available yet.</li>
-    {% endfor %}
-  </ul>
+  <ul class="testimonials">
+  {% for testimonial in testimonials %}
+    <li>
+      <h2>{{ testimonial.title }}</h2>
+      <p class="meta">By {{ testimonial.user.username }} - {{ testimonial.created_at|date:"F j, Y" }}</p>
+      <p class="preview">{{ testimonial.content }}</p>
+      <a href="{% url 'testimonial_detail' testimonial.pk %}" class="read-more">Read more →</a>
+    </li>
+  {% empty %}
+    <p>No testimonials found.</p>
+  {% endfor %}
+</ul>
 {% endblock %}
