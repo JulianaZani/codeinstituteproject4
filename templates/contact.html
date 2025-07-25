@@ -6,6 +6,10 @@
     <h2>Contact Us</h2>
     <p>If you have any questions or suggestions, feel free to reach out by filling out the form below.</p>
 
+    {% if success %}
+      <p class="success-message">Thanks! Your message has been sent.</p>
+    {% endif %}
+
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}

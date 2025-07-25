@@ -1,33 +1,12 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required
-from django.contrib import messages
-from .models import Testimonial
-from .forms import TestimonialForm
-
-def testimonial_list(request):
-    testimonials = Testimonial.objects.filter(approved=True)
-    return render(request, 'testimonials/testimonial_list.html', {'testimonials': testimonials})
-
-def testimonial_detail(request, pk):
-    testimonial = get_object_or_404(Testimonial, pk=pk, approved=True)
-    return render(request, 'testimonials/testimonial_detail.html', {'testimonial': testimonial})
-
-@login_required
-def add_testimonial(request):
-    if request.method == 'POST':
-        form = TestimonialForm(request.POST, request.FILES)
-        if form.is_valid():
-            testimonial = form.save(commit=False)
-            testimonial.user = request.user
-            testimonial.save()
-            messages.success(request, 'Your testimonial was submitted and is awaiting approval.')
-            return redirect('testimonial_list')
-    else:
-        form = TestimonialForm()
-    return render(request, 'testimonials/add_testimonial.html', {'form': form})
+from django.shortcuts import render
+from .forms import ContactForm
 
 def contact_view(request):
+    form = ContactForm()
+
     if request.method == 'POST':
-        # You could handle contact form logic here later
-        return render(request, 'contact.html', {'success': True})
-    return render(request, 'contact.html')
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            return render(request, 'contact.html', {'form': ContactForm(), 'success': True})
+
+    return render(request, 'contact.html', {'form': form})
