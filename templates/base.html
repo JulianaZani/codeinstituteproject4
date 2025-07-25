@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Volunteer Testimonials</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -14,13 +14,19 @@
 
         <nav>
             {% if user.is_authenticated %}
-                <p>Hello, {{ user.username }} | 
-                <form action="{% url 'logout' %}" method="post" style="display:inline;">
-                    {% csrf_token %}
-                    <button type="submit" style="background:none;border:none;color:blue;cursor:pointer;padding:0;">Logout</button>
-                </form> |
-                <a href="{% url 'add_testimonial' %}">Submit Testimonial</a> |
-                <a href="{% url 'contact' %}">Contact</a>
+                <p>
+                    Hello, {{ user.username }} | 
+
+                    <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" 
+                            style="background:none; border:none; color:#ffdd57; font-weight:bold; cursor:pointer; padding:0;">
+                            Logout
+                        </button>
+                    </form> | 
+
+                    <a href="{% url 'add_testimonial' %}">Submit Testimonial</a> | 
+                    <a href="{% url 'contact' %}">Contact</a>
                 </p>
             {% else %}
                 <a href="{% url 'login' %}">Login</a> |
@@ -38,7 +44,7 @@
                 {% endfor %}
             </ul>
         {% endif %}
-        
+
         {% block content %}
         {% endblock %}
     </main>
