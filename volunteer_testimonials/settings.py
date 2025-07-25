@@ -1,21 +1,10 @@
 import os
 import dj_database_url
-import cloudinary
 from pathlib import Path
 
 # Load environment variables from env.py
 if os.path.isfile('env.py'):
     import env
-
-# Configure Cloudinary using CLOUDINARY_URL
-cloudinary.config(
-    cloud_name=os.environ.get('CLOUDINARY_URL').split('@')[-1],
-    api_key=os.environ.get('CLOUDINARY_URL').split('//')[1].split(':')[0],
-    api_secret=os.environ.get('CLOUDINARY_URL').split(':')[2].split('@')[0]
-)
-
-# Use Cloudinary for media file storage
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -107,3 +96,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Cloudinary settings
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
+}
