@@ -15,11 +15,17 @@
         <nav>
             {% if user.is_authenticated %}
                 <p>Hello, {{ user.username }} | 
-                <a href="{% url 'logout' %}">Logout</a> | 
-                <a href="{% url 'add_testimonial' %}">Submit Testimonial</a></p>
+                <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" style="background:none;border:none;color:blue;cursor:pointer;padding:0;">Logout</button>
+                </form> |
+                <a href="{% url 'add_testimonial' %}">Submit Testimonial</a> |
+                <a href="{% url 'contact' %}">Contact</a>
+                </p>
             {% else %}
                 <a href="{% url 'login' %}">Login</a> |
-                <a href="{% url 'signup' %}">Sign Up</a>
+                <a href="{% url 'signup' %}">Sign Up</a> |
+                <a href="{% url 'contact' %}">Contact</a>
             {% endif %}
         </nav>
     </header>
