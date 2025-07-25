@@ -1,16 +1,22 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-  <article>
+  <article class="testimonial-detail">
     <h2>{{ testimonial.title }}</h2>
+
     <p><strong>By:</strong> {{ testimonial.user.username }}</p>
     <p><strong>Posted on:</strong> {{ testimonial.created_on|date:"F j, Y" }}</p>
 
-    {% if testimonial.image %}
-      <img src="{{ testimonial.image.url }}" alt="Photo for {{ testimonial.title }}" style="max-width: 400px;">
-    {% endif %}
+    <div class="image-container" style="margin: 20px 0;">
+      {% if testimonial.image %}
+        <img src="{{ testimonial.image.url }}" alt="Photo for {{ testimonial.title }}" style="max-width: 100%; height: auto; border-radius: 10px;">
+      {% else %}
+        <img src="{% static 'images/default.jpg' %}" alt="Default image" style="max-width: 100%; height: auto; border-radius: 10px;">
+      {% endif %}
+    </div>
 
-    <p>{{ testimonial.content }}</p>
+    <p>{{ testimonial.content|linebreaks }}</p>
 
     <a href="{% url 'testimonial_list' %}">&larr; Back to all testimonials</a>
   </article>

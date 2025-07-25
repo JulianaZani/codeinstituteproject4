@@ -6,7 +6,7 @@ class Testimonial(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     content = models.TextField()
-    image = models.ImageField(upload_to='testimonials/', blank=True, null=True)
+    image = CloudinaryField('image', blank=True, null=True)  # ← Aqui está a mudança
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
@@ -15,7 +15,3 @@ class Testimonial(models.Model):
 
     def __str__(self):
         return f"{self.title} by {self.user.username}"
-
-class Testimonial(models.Model):
-    # ...
-    image = CloudinaryField('image', blank=True, null=True)
