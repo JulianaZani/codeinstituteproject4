@@ -100,5 +100,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Cloudinary settings
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-# Logout redirect URL
+# Login and logout redirect URL
+LOGIN_REDIRECT_URL = '/testimonial/add/'
 LOGOUT_REDIRECT_URL = '/'
