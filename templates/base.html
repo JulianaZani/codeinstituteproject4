@@ -17,12 +17,9 @@
                 <p>
                     Hello, {{ user.username }} | 
 
-                    <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                    <form action="{% url 'logout' %}" method="post" class="logout-form">
                         {% csrf_token %}
-                        <button type="submit" 
-                            style="background:none; border:none; color:#ffdd57; font-weight:bold; cursor:pointer; padding:0;">
-                            Logout
-                        </button>
+                        <button type="submit" class="logout-btn">Logout</button>
                     </form> | 
 
                     <a href="{% url 'add_testimonial' %}">Submit Testimonial</a> | 
