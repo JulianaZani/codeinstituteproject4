@@ -190,9 +190,9 @@ form button:hover {
 }
 
 .logout-btn {
-    background: none;
+    background-color: transparent;
     border: none;
-    color: #07133a;
+    color: #ffdd57;
     font-weight: bold;
     cursor: pointer;
     padding: 0;
@@ -201,6 +201,7 @@ form button:hover {
 }
 
 .logout-btn:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
