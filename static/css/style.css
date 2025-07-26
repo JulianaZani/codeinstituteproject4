@@ -45,6 +45,29 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Logout button */
+.logout-form {
+    display: inline;
+}
+
+.logout-btn {
+    background-color: #ffffff; /* fundo branco */
+    color: #0d1b4c;            /* texto azul-marinho */
+    border: 2px solid #0d1b4c;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #e6e6e6; /* leve cinza ao passar mouse */
+    color: #0d1b4c;
+    text-decoration: none;
+}
+
 /* Main container */
 main {
     max-width: 1000px;
@@ -64,7 +87,6 @@ ul.testimonials {
     padding: 0;
 }
 
-/* Individual testimonial card */
 ul.testimonials li {
     background-color: #fdfdfd;
     border: 1px solid #ddd;
@@ -182,27 +204,6 @@ form button {
 
 form button:hover {
     background-color: #07133a;
-}
-
-/* Logout button */
-.logout-form {
-    display: inline;
-}
-
-.logout-btn {
-    background-color: transparent;
-    border: none;
-    color: #ffdd57;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 0;
-    font-size: 1rem;
-    text-decoration: none;
-}
-
-.logout-btn:hover {
-    color: #ffffff;
-    text-decoration: underline;
 }
 
 /* Back button */
