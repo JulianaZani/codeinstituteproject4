@@ -192,7 +192,7 @@ form button:hover {
 .logout-btn {
     background: none;
     border: none;
-    color: #ffdd57;
+    color: #07133a;
     font-weight: bold;
     cursor: pointer;
     padding: 0;
@@ -202,7 +202,6 @@ form button:hover {
 
 .logout-btn:hover {
     text-decoration: underline;
-    color: #fff;
 }
 
 /* Back button */
