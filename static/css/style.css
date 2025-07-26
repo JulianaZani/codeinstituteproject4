@@ -99,7 +99,7 @@ ul.testimonials li .preview {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4; /* Show only 4 lines */
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     font-size: 0.95rem;
     color: #444;
@@ -182,6 +182,43 @@ form button {
 
 form button:hover {
     background-color: #07133a;
+}
+
+/* Logout button */
+.logout-form {
+    display: inline;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: #ffdd57;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Back button */
+.back-link {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.back-link a {
+    color: #0d1b4c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
