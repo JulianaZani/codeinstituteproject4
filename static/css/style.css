@@ -62,11 +62,15 @@ nav {
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
-    padding: 0;
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .logout-btn:hover {
-    text-decoration: underline;
+    background-color: #e6e6e6;
+    color: #0d1b4c;
+    text-decoration: none;
 }
 
 /* Main container */
