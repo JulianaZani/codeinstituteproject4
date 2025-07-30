@@ -29,6 +29,15 @@ header h1 a {
     font-weight: bold;
 }
 
+.page-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
 /* Navigation */
 nav {
     margin-top: 10px;
@@ -62,9 +71,9 @@ nav {
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .logout-btn:hover {
