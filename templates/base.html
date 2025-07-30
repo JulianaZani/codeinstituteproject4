@@ -8,6 +8,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
     <header>
         <h1><a href="{% url 'testimonial_list' %}">Volunteer Testimonials</a></h1>
@@ -21,7 +22,7 @@
                         {% csrf_token %}
                         <button type="submit" class="logout-btn">Logout</button>
                     </form> |
-                                    
+
                     <a href="{% url 'add_testimonial' %}">Submit Testimonial</a> |
                     <a href="{% url 'password_change' %}">Change Password</a> |
                     <a href="{% url 'contact' %}">Contact</a>
@@ -49,5 +50,7 @@
     <footer>
         <p>&copy; 2025 Volunteer Project</p>
     </footer>
+
 </body>
+
 </html>

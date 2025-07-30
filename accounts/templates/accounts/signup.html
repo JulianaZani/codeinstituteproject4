@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
   <h2>Sign Up</h2>
+  
   <form method="post" class="auth-form">
     {% csrf_token %}
 
@@ -44,7 +45,8 @@
 
   <p>Already have an account? <a href="{% url 'login' %}">Log in here</a>.</p>
 
-  <div>
-    <a href="/" class="back-button">← Back</a>
+  <div class="back-link">
+    <a href="{% url 'testimonial_list' %}">← Back</a>
   </div>
+
 {% endblock %}

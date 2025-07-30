@@ -18,6 +18,9 @@
 
     <p>{{ testimonial.content|linebreaks }}</p>
 
-    <a href="{% url 'testimonial_list' %}">&larr; Back to all testimonials</a>
+    <div class="back-link">
+    <a href="{% url 'testimonial_list' %}">← Back</a>
+    </div>
+
   </article>
 {% endblock %}
