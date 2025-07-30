@@ -10,6 +10,12 @@
   <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
 
   <p>Don't have an account? <a href="{% url 'signup' %}">Sign up here</a>.</p>
+  {% if user.is_authenticated %}
+    <p>
+      <a href="{% url 'password_change' %}">Change Password</a> | 
+      <a href="{% url 'logout' %}">Log Out</a>
+    </p>
+  {% endif %}
 
   <div>
     <a href="/" class="back-button">← Back</a>

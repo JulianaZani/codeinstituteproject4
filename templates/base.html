@@ -15,14 +15,10 @@
         <nav>
             {% if user.is_authenticated %}
                 <p>
-                    Hello, {{ user.username }} | 
-
-                    <form action="{% url 'logout' %}" method="post" class="logout-form">
-                        {% csrf_token %}
-                        <button type="submit" class="logout-btn">Logout</button>
-                    </form> | 
-
-                    <a href="{% url 'add_testimonial' %}">Submit Testimonial</a> | 
+                    Hello, {{ user.username }} |
+                    <a href="{% url 'logout' %}">Logout</a> |
+                    <a href="{% url 'password_change' %}">Change Password</a> |
+                    <a href="{% url 'add_testimonial' %}">Submit Testimonial</a> |
                     <a href="{% url 'contact' %}">Contact</a>
                 </p>
             {% else %}
@@ -42,8 +38,7 @@
             </ul>
         {% endif %}
 
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
     </main>
 
     <footer>
