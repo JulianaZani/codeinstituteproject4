@@ -3,15 +3,24 @@
 {% block content %}
   <h1>Testimonials</h1>
   <ul class="testimonials">
-  {% for testimonial in testimonials %}
-    <li>
-      <h2>{{ testimonial.title }}</h2>
-      <p class="meta">By {{ testimonial.user.username }} - {{ testimonial.created_at|date:"F j, Y" }}</p>
-      <p class="preview">{{ testimonial.content }}</p>
-      <a href="{% url 'testimonial_detail' testimonial.pk %}" class="read-more">Read more →</a>
-    </li>
-  {% empty %}
-    <p>No testimonials found.</p>
-  {% endfor %}
-</ul>
+    {% for testimonial in testimonials %}
+      <li class="testimonial-card">
+        <div class="testimonial-header">
+          <h2>{{ testimonial.title }}</h2>
+          <img 
+            src="{% if testimonial.image %}{{ testimonial.image.url }}{% else %}{% static 'images/default.jpg' %}{% endif %}" 
+            alt="{{ testimonial.title }}" 
+            class="testimonial-thumb"
+          >
+        </div>
+        <p class="meta">
+          By {{ testimonial.user.username }} - {{ testimonial.created_at|date:"F j, Y" }}
+        </p>
+        <p class="preview">{{ testimonial.content|truncatewords:30 }}</p>
+        <a href="{% url 'testimonial_detail' testimonial.pk %}" class="read-more">Read more →</a>
+      </li>
+    {% empty %}
+      <p>No testimonials found.</p>
+    {% endfor %}
+  </ul>
 {% endblock %}

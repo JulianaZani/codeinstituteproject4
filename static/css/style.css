@@ -133,6 +133,23 @@ ul.testimonials li .preview {
     margin-bottom: auto;
 }
 
+/* Testimonial header with image */
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.testimonial-thumb {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+}
+
 /* Link to full testimonial */
 ul.testimonials li a.read-more {
     margin-top: 15px;
