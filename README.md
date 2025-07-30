@@ -62,3 +62,11 @@ Below are the user stories defined for the project:
 - **Heroku**
 - **Git & GitHub**
 - **GitHub Projects**
+
+images source
+https://itoldya420.getarchive.net/amp/media/coast-guard-station-crew-visits-nursing-facility-for-valentines-day-dvids1094304-583d1b
+https://www.streetlab.org/2018/08/28/making-a-place-for-learning-at-nyc-play-streets/
+https://www.flickr.com/photos/adamthelibrarian/14693926095
+https://cura.org.au/
+https://picryl.com/media/help-child-charity-people-908b3c
+https://aserghc.com.br/festa-das-criancas-reune-milhares-de-trabalhadores-e-suas-familias/

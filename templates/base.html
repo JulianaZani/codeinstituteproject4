@@ -23,7 +23,7 @@
                     <a href="{% url 'password_change' %}">Change Password</a> |
                     <a href="{% url 'contact' %}">Contact</a> |
 
-                    <form action="{% url 'logout' %}" method="post" class="logout-form">
+                    <form action="{% url 'logout' %}" method="post" class="logout-form inline-form">
                         {% csrf_token %}
                         <button type="submit" class="logout-btn">Logout</button>
                     </form>

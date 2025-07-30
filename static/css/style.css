@@ -73,6 +73,15 @@ nav a:hover {
     text-decoration: none;
 }
 
+.inline-form {
+    display: inline;
+}
+
+.inline-form .logout-btn {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
 /* Main container */
 main {
     max-width: 1000px;
