@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
   <h1>Testimonials</h1>
+  
   <ul class="testimonials">
     {% for testimonial in testimonials %}
       <li class="testimonial-card">
@@ -23,4 +24,5 @@
       <p>No testimonials found.</p>
     {% endfor %}
   </ul>
+  
 {% endblock %}
