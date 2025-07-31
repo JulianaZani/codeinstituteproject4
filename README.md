@@ -49,12 +49,18 @@ Below are the user stories defined for the project:
 
 ---
 
+## Wireframes
+
+![wireframes](doc/screenshots/wireframehomeandaddtestimonial.png)
+![wireframes](doc/screenshots/wireframelogincontact.png)
+
+---
+
 ## Technologies Used
 
 - **Python 3**
 - **Django 5**
 - **HTML5 / CSS3**
-- **Bootstrap 5**
 - **JavaScript**
 - **SQLite (development)**
 - **PostgreSQL (production)**
