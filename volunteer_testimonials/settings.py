@@ -2,6 +2,7 @@ import os
 import dj_database_url
 from pathlib import Path
 import cloudinary
+import dj_database_url
 
 # Load environment variables from env.py
 if os.path.isfile('env.py'):
@@ -66,10 +67,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'volunteer_testimonials.wsgi.application'
 
-# Use PostgreSQL (DATABASE_URL from env.py or Heroku config vars)
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.parse(DATABASE_URL)
+    }
+else:
+    # Fallback to SQLite for local development
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
