@@ -253,6 +253,23 @@ form button:hover {
     text-decoration: underline;
 }
 
+/* Button link */
+.btn-link {
+    display: inline-block;
+    background-color: #6c757d; /* Cinza similar ao Bootstrap secondary */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-link:hover {
+    background-color: #5a6268;
+    text-decoration: none;
+}
+
 /* Footer */
 footer {
     margin-top: 40px;
