@@ -69,6 +69,22 @@ Below are the user stories defined for the project:
 - **Git & GitHub**
 - **GitHub Projects**
 
+CRUD Functionality
+The project implements full CRUD functionality for testimonials:
+
+Create – Users can submit a new testimonial in "Submit Testimonial".
+
+
+Read – All testimonials are displayed on the homepage for users to view.
+
+
+Update – Logged-in users can edit their testimonials via the "Edit" button.
+
+
+Delete – Logged-in users can delete a testimonial they created.
+
+
+
 images source
 https://itoldya420.getarchive.net/amp/media/coast-guard-station-crew-visits-nursing-facility-for-valentines-day-dvids1094304-583d1b
 https://www.streetlab.org/2018/08/28/making-a-place-for-learning-at-nyc-play-streets/
