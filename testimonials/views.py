@@ -26,6 +26,38 @@ def add_testimonial(request):
         form = TestimonialForm()
     return render(request, 'testimonials/add_testimonial.html', {'form': form})
 
+@login_required
+def edit_testimonial(request, pk):
+    testimonial = get_object_or_404(Testimonial, pk=pk)
+    if testimonial.user != request.user:
+        messages.error(request, "You can only edit your own testimonials.")
+        return redirect('testimonial_list')
+
+    if request.method == 'POST':
+        form = TestimonialForm(request.POST, request.FILES, instance=testimonial)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your testimonial was updated successfully.')
+            return redirect('testimonial_detail', pk=testimonial.pk)
+    else:
+        form = TestimonialForm(instance=testimonial)
+
+    return render(request, 'testimonials/add_testimonial.html', {'form': form, 'edit': True})
+
+@login_required
+def delete_testimonial(request, pk):
+    testimonial = get_object_or_404(Testimonial, pk=pk)
+    if testimonial.user != request.user:
+        messages.error(request, "You can only delete your own testimonials.")
+        return redirect('testimonial_list')
+
+    if request.method == 'POST':
+        testimonial.delete()
+        messages.success(request, 'Your testimonial was deleted successfully.')
+        return redirect('testimonial_list')
+
+    return render(request, 'testimonials/testimonial_confirm_delete.html', {'testimonial': testimonial})
+
 def contact_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
