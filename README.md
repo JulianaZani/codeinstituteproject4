@@ -125,25 +125,62 @@ Delete – Logged-in users can delete a testimonial they created.
 
 Pages checked and approved:  
 
-- Initial page: https://testimonials-aeb7081fc7ea.herokuapp.com/
+- Initial page: https://testimonials-aeb7081fc7ea.herokuapp.com/  
+
 ![w3c01initialpage](doc/screenshots/w3c01.png)  
 
-- Login page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/login/
+- Login page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/login/  
+
 ![w3c02loginpage](doc/screenshots/w3c02.png)
 
-- Signup page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/signup/
-**Errors presented:**
+- Signup page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/signup/  
+
+**Errors presented:**  
+
 ![w3c03signuppage](doc/screenshots/w3c03.png)
 
-Adjustments made: delete small tag and add passwords helptext id in signup.html 
-**After fixing the errors:**
+Adjustments made: delete "small" tag and add passwords helptext id in signup.html  
+**After fixing the errors:**  
+
 ![w3c04signuppage](doc/screenshots/w3c04.png)
  
-- Contact page: https://testimonials-aeb7081fc7ea.herokuapp.com/contact/
+- Contact page: https://testimonials-aeb7081fc7ea.herokuapp.com/contact/  
+
 ![w3c05contactpage](doc/screenshots/w3c05.png)
 
+- Submit testimonial page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/add/  
 
+![w3c06submittestimonialpage](doc/screenshots/w3c06.png)
 
+- Change password page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/password_change/  
+
+![w3c07changepasswordpage](doc/screenshots/w3c07.png)
+
+- Testimonial edit page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/edit/  
+
+![w3c08testimonialeditpage](doc/screenshots/w3c08.png)
+
+- Testimonial delete page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/delete/  
+
+![w3c09testimonialdeletepage](doc/screenshots/w3c09.png)
+
+- Testimonial detail page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/  
+and https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/14/ .  
+
+**Errors presented:**  
+
+![w3c10testimonialdetail1before](doc/screenshots/w3c10.png)  
+
+![w3c11testimonialdetail2before](doc/screenshots/w3c11.png)  
+
+Adjustment made: delete {{ testimonial.content|linebreaksbr }} "p" tags in testimonial_detail.html.  
+**After fixing the errors:**  
+
+![w3c12testimonialdetail1after](doc/screenshots/w3c12.png)  
+
+![w3c13testimonialdetail2after](doc/screenshots/w3c13.png)  
+
+---
 
 ## Credits
 
