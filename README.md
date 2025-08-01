@@ -41,11 +41,22 @@ The project was designed with the following user groups in mind:
 
 ## User Stories
 
-User stories were planned and tracked using the [GitHub Projects Board](<https://github.com/users/JulianaZani/projects/1/views/1?layout=board>) in an Agile format.  
+User stories were planned and tracked using the [GitHub Projects Board](<https://github.com/users/JulianaZani/projects/1/views/1?layout=board>).  
 
 Below are the user stories defined for the project:  
 
 ![userstories](doc/screenshots/userstories.png)
+
+### MoSCoW Prioritization
+
+| Category         | User Stories                                                                 | Points | % of Total |
+|-----------------|-------------------------------------------------------------------------------|--------|-----------|
+| **Must Have**   | 1. View Testimonials <br> 2. Register an Account <br> 3. Login to My Account <br> 4. Submit a Testimonial | 4 | 44% |
+| **Should Have** | 5. Edit My Testimonial <br> 6. Delete My Testimonial                         | 2 | 22% |
+| **Could Have**  | 7. Admin Approval <br> 8. Contact Form <br> 9. Responsive Design              | 3 | 33% |
+| **Total**       | **9**                                                                        | **9**  | **100%** |
+
+**Rule:** *Should Have* ≤ 60% 
 
 ---
 
