@@ -121,6 +121,29 @@ Delete – Logged-in users can delete a testimonial they created.
 
 ## Testing
 
+### W3C HTML Validator  
+
+Pages checked and approved:  
+
+- Initial page: https://testimonials-aeb7081fc7ea.herokuapp.com/
+![w3c01initialpage](doc/screenshots/w3c01.png)  
+
+- Login page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/login/
+![w3c02loginpage](doc/screenshots/w3c02.png)
+
+- Signup page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/signup/
+**Errors presented:**
+![w3c03signuppage](doc/screenshots/w3c03.png)
+
+Adjustments made: delete small tag and add passwords helptext id in signup.html 
+**After fixing the errors:**
+![w3c04signuppage](doc/screenshots/w3c04.png)
+ 
+- Contact page: https://testimonials-aeb7081fc7ea.herokuapp.com/contact/
+![w3c05contactpage](doc/screenshots/w3c05.png)
+
+
+
 
 ## Credits
 
