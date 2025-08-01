@@ -178,6 +178,11 @@ ul.testimonials li a.read-more:hover {
     color: #842029;
 }
 
+.help-text {
+  font-size: 0.875rem;
+  color: #555;
+}
+
 /* Forms */
 form {
     margin-top: 20px;
