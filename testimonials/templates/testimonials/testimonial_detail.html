@@ -16,7 +16,7 @@
       {% endif %}
     </div>
 
-    <p>{{ testimonial.content|linebreaks }}</p>
+    {{ testimonial.content|linebreaks }}
 
     {% if user.is_authenticated and testimonial.user == user %}
       <div class="mt-3">
