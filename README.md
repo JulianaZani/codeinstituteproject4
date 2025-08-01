@@ -1,6 +1,6 @@
-# Volunteer Testimonials  
+# Volunteer Testimonials - HopeBridge Community
 
-**Volunteer Testimonials** is a full-stack web application built with Django. It allows users to share and read real-life stories about their experiences participating in social and volunteering projects.  
+**Volunteer Testimonials** is a full-stack web application built with Django. It allows users to share and read real-life stories about their experiences participating in social and volunteering projects. The name **HopeBridge Community** was not chosen at the beginning of the project.
 
 The site is designed with accessibility and user experience in mind, following modern development practices using HTML, CSS, JavaScript, Python, and Django.  
 
@@ -13,7 +13,6 @@ The purpose of this application is to:
 - Provide a platform for users to submit testimonials about volunteering experiences
 - Allow visitors to read and get inspired by others’ stories
 - Enable administrators to manage, approve, or remove testimonials
-- Ensure published content maintains quality through admin review
 
 ---
 
@@ -103,21 +102,27 @@ Below are the user stories defined for the project:
 ---
 
 
-## CRUD Functionality
-The project implements full CRUD functionality for testimonials:
+## CRUD Functionality  
 
-Create – Users can submit a new testimonial in "Submit Testimonial".
+The project implements full CRUD functionality for testimonials:  
 
-
-Read – All testimonials are displayed on the homepage for users to view.
+Create – Users can submit a new testimonial in "Submit Testimonial".  
 
 
-Update – Logged-in users can edit their testimonials via the "Edit" button.
+Read – All testimonials are displayed on the homepage for users to view.  
 
 
-Delete – Logged-in users can delete a testimonial they created.
+Update – Logged-in users can edit their testimonials via the "Edit" button.  
 
 
+Delete – Logged-in users can delete a testimonial they created.  
+
+---
+
+## Testing
+
+
+## Credits
 
 images source
 https://itoldya420.getarchive.net/amp/media/coast-guard-station-crew-visits-nursing-facility-for-valentines-day-dvids1094304-583d1b
