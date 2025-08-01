@@ -180,6 +180,13 @@ Adjustment made: delete {{ testimonial.content|linebreaksbr }} "p" tags in testi
 
 ![w3c13testimonialdetail2after](doc/screenshots/w3c13.png)  
 
+
+### W3C CSS Validator  
+
+No errors were found when passing through the official (Jigsaw) validator.  
+
+![w3ccss](doc/screenshots/w3ccss.png)
+
 ---
 
 ## Credits
