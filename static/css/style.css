@@ -219,6 +219,7 @@ form button:hover {
 }
 
 .logout-btn {
+    all: unset;
     background: none;
     color: #0d1b4c;
     border: none;
