@@ -187,6 +187,12 @@ No errors were found when passing through the official (Jigsaw) validator.
 
 ![w3ccss](doc/screenshots/w3ccss.png)
 
+
+### Accessibility 
+
+I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools and Wave Evolution Tool.  
+
+
 ---
 
 ## Credits
