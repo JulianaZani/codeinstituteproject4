@@ -37,6 +37,11 @@
     <div>
       {{ form.password2.label_tag }}
       {{ form.password2 }}
+      {% if form.password2.help_text %}
+        <div id="id_password2_helptext" class="help-text">
+          {{ form.password2.help_text|safe }}
+        </div>
+      {% endif %}
       {% if form.password2.errors %}
         <div class="error">{{ form.password2.errors }}</div>
       {% endif %}
