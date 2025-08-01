@@ -32,8 +32,7 @@ The project was designed with the following user groups in mind:
 - Receive confirmation messages upon actions  
 
 ### Admin Users:
-- Approve or reject **new testimonials**  
-- Review and approve any **edited testimonials** before changes go live  
+- Approve or reject **testimonials**    
 - Remove testimonials that do not meet the platform’s guidelines  
 - Receive contact form messages via email  
 
@@ -80,7 +79,31 @@ Below are the user stories defined for the project:
 - **Git & GitHub**
 - **GitHub Projects**
 
-CRUD Functionality
+---
+
+## Data Schema  
+
+**ER Diagram**  
+
++--------------------+        1       N  +----------------------+
+|       User         |------------------>|     Testimonial      |
++--------------------+                   +----------------------+
+| PK id              |                   | PK id                |
+| username           |                   | FK user_id           |
+| email              |                   | title                |
+| password           |                   | content              |
+| first_name         |                   | image                |
+| last_name          |                   | created_on           |
+| is_staff           |                   | approved             |
+| is_superuser       |                   +----------------------+
+| is_active          |
+| date_joined        |
++--------------------+
+
+---
+
+
+## CRUD Functionality
 The project implements full CRUD functionality for testimonials:
 
 Create – Users can submit a new testimonial in "Submit Testimonial".
