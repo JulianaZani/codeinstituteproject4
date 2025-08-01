@@ -10,13 +10,12 @@ html, body {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
-    color: #333;
     line-height: 1.6;
 }
 
 /* Header */
 header {
-    background-color: #0d1b4c; /* Navy Blue */
+    background-color: #0d1b4c;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -126,7 +125,7 @@ ul.testimonials li h2 {
 
 ul.testimonials li .meta {
     font-size: 0.85rem;
-    color: #666;
+    color: #555;
     margin-bottom: 12px;
 }
 
@@ -138,7 +137,7 @@ ul.testimonials li .preview {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     font-size: 0.95rem;
-    color: #444;
+    color: #555;
     margin-bottom: auto;
 }
 
@@ -225,10 +224,10 @@ form select {
 
 form button {
     background-color: #0d1b4c;
-    color: white;
-    padding: 10px 20px;
+    color: #fff;
+    padding: 8px 18px;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
 }
@@ -256,8 +255,8 @@ form button:hover {
 /* Button link */
 .btn-link {
     display: inline-block;
-    background-color: #6c757d; /* Cinza similar ao Bootstrap secondary */
-    color: white;
+    background-color: #555;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 6px;
     font-weight: bold;
@@ -266,7 +265,7 @@ form button:hover {
 }
 
 .btn-link:hover {
-    background-color: #5a6268;
+    background-color: #464545;
     text-decoration: none;
 }
 
@@ -274,7 +273,7 @@ form button:hover {
 footer {
     margin-top: 40px;
     text-align: center;
-    color: #777;
+    color: #555;
     font-size: 0.9rem;
     padding: 20px;
     background-color: #f1f1f1;
