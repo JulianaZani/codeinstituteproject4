@@ -9,7 +9,12 @@ def testimonial_list(request):
     return render(request, 'testimonials/testimonial_list.html', {'testimonials': testimonials})
 
 def testimonial_detail(request, pk):
-    testimonial = get_object_or_404(Testimonial, pk=pk, approved=True)
+    testimonial = get_object_or_404(Testimonial, pk=pk)
+
+    if not testimonial.approved and testimonial.user != request.user and not request.user.is_staff:
+        messages.error(request, "This testimonial is awaiting approval.")
+        return redirect('testimonial_list')
+
     return render(request, 'testimonials/testimonial_detail.html', {'testimonial': testimonial})
 
 @login_required
@@ -19,6 +24,7 @@ def add_testimonial(request):
         if form.is_valid():
             testimonial = form.save(commit=False)
             testimonial.user = request.user
+            testimonial.approved = False
             testimonial.save()
             messages.success(request, 'Your testimonial was submitted and is awaiting approval.')
             return redirect('testimonial_list')
@@ -36,8 +42,10 @@ def edit_testimonial(request, pk):
     if request.method == 'POST':
         form = TestimonialForm(request.POST, request.FILES, instance=testimonial)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Your testimonial was updated successfully.')
+            updated_testimonial = form.save(commit=False)
+            updated_testimonial.approved = False
+            updated_testimonial.save()
+            messages.info(request, 'Your testimonial was edited and is awaiting admin approval.')
             return redirect('testimonial_detail', pk=testimonial.pk)
     else:
         form = TestimonialForm(instance=testimonial)

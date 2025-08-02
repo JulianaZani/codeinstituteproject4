@@ -1,24 +1,36 @@
 {% extends "base.html" %}
 {% load static %}
-{% load cloudinary_filters %}  {# Load your custom filter #}
+{% load cloudinary_filters %}  {# Filter to optimize Cloudinary images #}
 
 {% block content %}
   <article class="testimonial-detail">
     <h2>{{ testimonial.title }}</h2>
 
-    <p><strong>By:</strong> {{ testimonial.user.username }}</p>
+    <p><strong>Author:</strong> {{ testimonial.user.username }}</p>
     <p><strong>Posted on:</strong> {{ testimonial.created_on|date:"F j, Y" }}</p>
+
+    {# Pending approval notice #}
+    {% if not testimonial.approved %}
+      <div class="pending-approval">
+        {% if user.is_authenticated and (testimonial.user == user or user.is_staff) %}
+          <p><em>⚠ This testimonial is currently awaiting admin approval.</em></p>
+        {% endif %}
+      </div>
+    {% endif %}
 
     <div class="image-container">
       {% if testimonial.image %}
-        <img src="{{ testimonial.image.url|cloudinary_optimize }}" alt="Photo for {{ testimonial.title }}">
+        <img src="{{ testimonial.image.url|cloudinary_optimize }}" alt="Image for {{ testimonial.title }}">
       {% else %}
         <img src="{% static 'images/default.jpg' %}" alt="Default image">
       {% endif %}
     </div>
 
-    {{ testimonial.content|linebreaks }}
+    <div class="content">
+      {{ testimonial.content|linebreaks }}
+    </div>
 
+    {# Edit/Delete buttons only for the testimonial owner #}
     {% if user.is_authenticated and testimonial.user == user %}
       <div class="mt-3">
         <a href="{% url 'edit_testimonial' testimonial.pk %}" class="btn-link">Edit</a>
