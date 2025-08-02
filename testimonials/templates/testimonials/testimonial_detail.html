@@ -1,5 +1,6 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 {% load static %}
+{% load cloudinary_filters %}  {# Load your custom filter #}
 
 {% block content %}
   <article class="testimonial-detail">
@@ -8,9 +9,9 @@
     <p><strong>By:</strong> {{ testimonial.user.username }}</p>
     <p><strong>Posted on:</strong> {{ testimonial.created_on|date:"F j, Y" }}</p>
 
-    <div class="image-container" style="margin: 20px 0;">
+    <div class="image-container">
       {% if testimonial.image %}
-        <img src="{{ testimonial.image.url }}" alt="Photo for {{ testimonial.title }}">
+        <img src="{{ testimonial.image.url|cloudinary_optimize }}" alt="Photo for {{ testimonial.title }}">
       {% else %}
         <img src="{% static 'images/default.jpg' %}" alt="Default image">
       {% endif %}
