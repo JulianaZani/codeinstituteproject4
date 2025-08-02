@@ -122,6 +122,27 @@ Delete – Logged-in users can delete a testimonial they created.
 
 ## Testing
 
+### Responsiveness
+
+The HopeBridge community website is fully responsive and adapts to all screen sizes, from mobile devices to large desktops.
+
+**Examples**
+
+![responsiveness01](doc/screenshots/responsiveness01.png)
+
+- Screen size - 768x1024:  
+
+![responsiveness768](doc/screenshots/responsiveness02.png)
+
+- Screen size - 324x726:
+
+![responsiveness324](doc/screenshots/responsiveness03.png)
+
+- Screen size - 2000x1347
+
+![responsiveness04](doc/screenshots/responsiveness04.png)
+
+
 ### W3C HTML Validator  
 
 Pages checked and approved:  
