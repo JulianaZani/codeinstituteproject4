@@ -233,7 +233,7 @@ I confirmed that the colors and fonts chosen are easy to read and accessible by 
 
 **LIGHTHOUSE**  
 
-Pages that had no problems:  
+**Pages that had no problems:**  
 
 - Login page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/login/  
 
@@ -262,6 +262,33 @@ Pages that had no problems:
 - Testimonial delete page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/delete/  
 
 ![lighthouse07testimonialdeletepage](doc/screenshots/lighthouse07.png)  
+
+**Pages that had problems:**
+
+- Initial page: https://testimonials-aeb7081fc7ea.herokuapp.com/  
+
+**BEFORE**  
+
+![lighthouse08initialpagebefore](doc/screenshots/lighthouse08.png)  
+
+Mixed Content Error.
+To fix the Mixed Content issue and force all Cloudinary images to be uploaded using HTTPS, I set secure=True in cloudinary.config and adjusted the MEDIA_URL (MEDIA_URL = f'https://res.cloudinary.com/{cloudinary.config().cloud_name}/image/upload/').
+
+Console showing errors:  
+
+![console01](doc/screenshots/console01.png)  
+
+**AFTER**
+
+![lighthouse09initialpageafter](doc/screenshots/lighthouse09.png) 
+
+**Problems to solve:**  
+
+![lighthouse10initialpage](doc/screenshots/lighthouse10.png)  
+
+![lighthouse11initialpage](doc/screenshots/lighthouse11.png)  
+
+
 
 
 ---
