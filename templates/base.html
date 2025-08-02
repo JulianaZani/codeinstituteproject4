@@ -13,6 +13,8 @@
     <header>
         <h1><a href="{% url 'testimonial_list' %}">HopeBridge Community</a></h1>
 
+        <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+
         <nav>
             {% if user.is_authenticated %}
                 <div class="nav-links">
@@ -54,5 +56,6 @@
     <footer>
         <p>&copy; 2025 Volunteer Project</p>
     </footer>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
