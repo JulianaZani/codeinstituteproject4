@@ -228,11 +228,41 @@ I confirmed that the colors and fonts chosen are easy to read and accessible by 
 
 - Testimonial delete page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/delete/  
 
-![wave10testimonialdeletepage](doc/screenshots/wave10.png)
+![wave10testimonialdeletepage](doc/screenshots/wave10.png)  
 
 
+**LIGHTHOUSE**  
 
-**LIGHTHOUSE**
+Pages that had no problems:  
+
+- Login page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/login/  
+
+![lighthouse01loginpage](doc/screenshots/lighthouse01.png)
+
+- Signup page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/signup/  
+
+![lighthouse02signuppage](doc/screenshots/lighthouse02.png)
+
+- Contact page: https://testimonials-aeb7081fc7ea.herokuapp.com/contact/  
+
+![lighthouse03contactpage](doc/screenshots/lighthouse03.png)
+
+- Submit testimonial page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/add/  
+
+![lighthouse04submittestimonialpage](doc/screenshots/lighthouse04.png)
+
+- Change password page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/password_change/  
+
+![lighthouse05changepasswordpage](doc/screenshots/lighthouse05.png)  
+
+- Testimonial edit page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/edit/  
+
+![lighthouse06estimonialeditpage](doc/screenshots/lighthouse06.png)
+
+- Testimonial delete page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/delete/  
+
+![lighthouse07testimonialdeletepage](doc/screenshots/lighthouse07.png)  
+
 
 ---
 
