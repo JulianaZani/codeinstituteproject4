@@ -11,12 +11,14 @@
 
     {# Pending approval notice #}
     {% if not testimonial.approved %}
-      <div class="pending-approval">
-        {% if user.is_authenticated and (testimonial.user == user or user.is_staff) %}
-          <p><em>⚠ This testimonial is currently awaiting admin approval.</em></p>
-        {% endif %}
-      </div>
+  <div class="pending-approval">
+    {% if user.is_authenticated %}
+      {% if testimonial.user == user or user.is_staff %}
+        <p><em>⚠ This testimonial is currently awaiting admin approval.</em></p>
+      {% endif %}
     {% endif %}
+  </div>
+{% endif %}
 
     <div class="image-container">
       {% if testimonial.image %}
