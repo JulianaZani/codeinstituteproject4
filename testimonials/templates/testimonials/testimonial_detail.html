@@ -10,9 +10,9 @@
 
     <div class="image-container" style="margin: 20px 0;">
       {% if testimonial.image %}
-        <img src="{{ testimonial.image.url }}" alt="Photo for {{ testimonial.title }}" style="max-width: 100%; height: auto; border-radius: 10px;">
+        <img src="{{ testimonial.image.url }}" alt="Photo for {{ testimonial.title }}">
       {% else %}
-        <img src="{% static 'images/default.jpg' %}" alt="Default image" style="max-width: 100%; height: auto; border-radius: 10px;">
+        <img src="{% static 'images/default.jpg' %}" alt="Default image">
       {% endif %}
     </div>
 
