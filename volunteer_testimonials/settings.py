@@ -3,6 +3,8 @@ import dj_database_url
 from pathlib import Path
 import cloudinary
 import cloudinary_storage
+import cloudinary.uploader
+import cloudinary.api
 
 # Load environment variables from env.py (only for local development)
 if os.path.isfile('env.py'):
@@ -104,16 +106,19 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Cloudinary for media files
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-# Cloudinary will read CLOUDINARY_URL automatically from Heroku
-cloudinary.config(cloudinary_url=os.environ.get('CLOUDINARY_URL'))
+# Force Cloudinary to use HTTPS
+cloudinary.config(
+    cloudinary_url=os.environ.get('CLOUDINARY_URL'),
+    secure=True
+)
 
-# Media settings (only relevant in local dev)
+# Media settings
 if DEBUG:
     MEDIA_URL = '/media/'
     MEDIA_ROOT = BASE_DIR / 'media'
 else:
     # In production, Cloudinary handles media URLs
-    MEDIA_URL = 'https://res.cloudinary.com/' + cloudinary.config().cloud_name + '/image/upload/'
+    MEDIA_URL = f'https://res.cloudinary.com/{cloudinary.config().cloud_name}/image/upload/'
     MEDIA_ROOT = None
 
 # Default primary key
