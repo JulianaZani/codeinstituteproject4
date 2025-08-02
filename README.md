@@ -289,6 +289,21 @@ Console showing errors:
 ![lighthouse11initialpage](doc/screenshots/lighthouse11.png)  
 
 
+- Testimonial detail page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/
+
+**BEFORE**  
+
+![lighthouse12testimonialdetailpage](doc/screenshots/lighthouse12.png)  
+
+ERRORS:
+![errors01](doc/screenshots/errors01.png)
+
+To fix the error I created templatetags/ cloudinary_filters.py and updated the image tag in testimonial_detail.html (src="{{ testimonial.image.url|cloudinary_optimize }}"
+alt="Photo for {{ testimonial.title }}"loading="lazy">).
+
+**AFTER**
+
+![lighthouse13testimonialdetailpage](doc/screenshots/lighthouse13.png) 
 
 
 ---
