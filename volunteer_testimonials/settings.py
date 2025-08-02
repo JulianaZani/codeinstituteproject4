@@ -125,5 +125,5 @@ else:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Login and logout redirects
-LOGIN_REDIRECT_URL = '/testimonial/add/'
+LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
