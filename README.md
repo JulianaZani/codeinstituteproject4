@@ -192,6 +192,9 @@ No errors were found when passing through the official (Jigsaw) validator.
 
 I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools and Wave Evolution Tool.  
 
+**WAVE**
+
+**LIGHTHOUSE**
 
 ---
 
