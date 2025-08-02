@@ -192,7 +192,45 @@ No errors were found when passing through the official (Jigsaw) validator.
 
 I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools and Wave Evolution Tool.  
 
-**WAVE**
+**WAVE**  
+
+- Initial page: https://testimonials-aeb7081fc7ea.herokuapp.com/  
+
+![wave01initialpage](doc/screenshots/wave01.png)  
+
+- Login page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/login/  
+
+![wave02loginpage](doc/screenshots/wave02.png)
+
+- Signup page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/signup/  
+
+![wave03signuppage](doc/screenshots/wave03.png)
+
+- Contact page: https://testimonials-aeb7081fc7ea.herokuapp.com/contact/  
+
+![wave04contactpage](doc/screenshots/wave04.png)
+
+- Submit testimonial page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/add/  
+
+![wave05submittestimonialpage](doc/screenshots/wave05.png)
+
+- Change password page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/password_change/  
+
+![wave06changepasswordpage](doc/screenshots/wave06.png)  
+
+- Testimonial detail page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/
+
+![wave08testimonialdetailpage](doc/screenshots/wave08.png)
+
+- Testimonial edit page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/edit/  
+
+![wave09estimonialeditpage](doc/screenshots/wave09.png)
+
+- Testimonial delete page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/delete/  
+
+![wave10testimonialdeletepage](doc/screenshots/wave10.png)
+
+
 
 **LIGHTHOUSE**
 
