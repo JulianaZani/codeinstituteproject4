@@ -2,19 +2,19 @@ import os
 import dj_database_url
 from pathlib import Path
 import cloudinary
-import dj_database_url
+import cloudinary_storage
 
-# Load environment variables from env.py
+# Load environment variables from env.py (only for local development)
 if os.path.isfile('env.py'):
     import env
 
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# Secret key
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-secret-key')
 
-# Set to False in production
+# Debug
 DEBUG = True
 
 ALLOWED_HOSTS = [
@@ -23,7 +23,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 
-# Application definition
+# Apps
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -67,14 +67,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'volunteer_testimonials.wsgi.application'
 
+# Database
 DATABASE_URL = os.environ.get("DATABASE_URL")
-
 if DATABASE_URL:
     DATABASES = {
         'default': dj_database_url.parse(DATABASE_URL)
     }
 else:
-    # Fallback to SQLite for local development
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -90,30 +89,36 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# Localization settings
+# Localization
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files (CSS, JS)
+# Static files
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Media files (uploaded by users)
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-
-# Default primary key type
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Cloudinary settings
+# Cloudinary for media files
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-cloudinary.config()
+# Cloudinary will read CLOUDINARY_URL automatically from Heroku
+cloudinary.config(cloudinary_url=os.environ.get('CLOUDINARY_URL'))
 
-# Login and logout redirect URL
+# Media settings (only relevant in local dev)
+if DEBUG:
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR / 'media'
+else:
+    # In production, Cloudinary handles media URLs
+    MEDIA_URL = 'https://res.cloudinary.com/' + cloudinary.config().cloud_name + '/image/upload/'
+    MEDIA_ROOT = None
+
+# Default primary key
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Login and logout redirects
 LOGIN_REDIRECT_URL = '/testimonial/add/'
 LOGOUT_REDIRECT_URL = '/'
