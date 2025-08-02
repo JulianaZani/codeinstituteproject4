@@ -60,7 +60,8 @@ Below are the user stories defined for the project:
 
 ## Wireframes
 
-![wireframes](doc/screenshots/wireframehomeandaddtestimonial.png)
+![wireframes](doc/screenshots/wireframehomeandaddtestimonial.png)  
+
 ![wireframes](doc/screenshots/wireframelogincontact.png)
 
 ---
@@ -310,6 +311,12 @@ alt="Photo for {{ testimonial.title }}"loading="lazy">).
 
 ## Deployment  
 
+- Steps for deployment:
+
+  - Create a new Heroku app
+  - Set the buildpack to Python 
+  - Link the Heroku app to the Github repository
+  - Click on Deploy
 
 ---
 
