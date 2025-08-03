@@ -23,6 +23,7 @@ This project was a real challenge for me. For most of the post-third project per
    - [Responsiveness](#responsiveness)
    - [W3C HTML Validator](#w3c-html-validator)
    - [W3C CSS Validator](#w3c-css-validator)
+   - [JSHint](#jshint)
    - [PEP8](#pep8)
    - [Accessibility](#accessibility)
      - [Wave](#wave)  
@@ -371,6 +372,14 @@ Adjustment made: delete {{ testimonial.content|linebreaksbr }} "p" tags in testi
 No errors were found when passing through the official (Jigsaw) validator.  
 
 ![w3ccss](doc/screenshots/w3ccss.png)
+
+
+### JSHint
+
+Script.js
+
+
+
 
 ### PEP8  
 
