@@ -184,7 +184,7 @@ Dependencies & Utilities
 [▲ Back to Top](#volunteer-testimonials---hopebridge-community) 
 
 **ER Diagram**  
-
+```
 +--------------------+        1       N  +----------------------+
 |       User         |------------------>|     Testimonial      |
 +--------------------+                   +----------------------+
@@ -199,6 +199,7 @@ Dependencies & Utilities
 | is_active          |
 | date_joined        |
 +--------------------+
+```
 
 ---
 
