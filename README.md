@@ -234,16 +234,41 @@ Dependencies & Utilities
 
 The project implements full CRUD functionality for testimonials:  
 
-Create – Users can submit a new testimonial in "Submit Testimonial".  
+**Create** – Users can submit a new testimonial in "Submit Testimonial".  
+
+![submittestimonial](doc/screenshots/crud00.png)  
+
+After the user submits a testimonial, the following message appears:  
+
+![submittestimonialmsg](doc/screenshots/crud01.png)  
 
 
-Read – All testimonials are displayed on the homepage for users to view.  
+**Read** – All testimonials are displayed on the homepage for users to view.  
+
+![testimonials](doc/screenshots/crud02.png) 
+
+The user can then access their own testimony, and the edit and delete buttons appear.  
+
+**Update** – Logged-in users can edit their testimonials via the "Edit" button.  
+
+After editing the statement, just click submit.  
+
+![edit](doc/screenshots/crud03.png)  
+
+After submitting the statement, a message will appear informing you that the edited statement will have to wait for the administrator's approval.  
+
+![editmsg](doc/screenshots/crud04.png)  
 
 
-Update – Logged-in users can edit their testimonials via the "Edit" button.  
+**Delete** – Logged-in users can delete a testimonial they created.  
 
+Instead of clicking edit, the user clicks delete and a page opens asking if the user really wants to delete.
 
-Delete – Logged-in users can delete a testimonial they created.  
+![deletequestion](doc/screenshots/crud05.png)  
+
+After delete confirmation a delete confirmation message appears.  
+
+![deletemsg](doc/screenshots/crud06.png)
 
 
 ---
@@ -489,10 +514,19 @@ alt="Photo for {{ testimonial.title }}"loading="lazy">).
 
 - Steps for deployment:
 
-  - Create a new Heroku app
-  - Set the buildpack to Python 
-  - Link the Heroku app to the Github repository
-  - Click on Deploy
+  - Generate requirements.txt: Pip freeze > requirements.txt  
+  - Create Procfile: web: gunicorn volunteer_testimonials.wsgi  
+  - Configure Environment Variables: settings.py  
+  import os  
+  SECRET_KEY = os.environ.get("SECRET_KEY", "default-key")  
+  DEBUG = os.environ.get("DEBUG", "False") == "True"  
+  Heroku Dashboard → Settings → Config Vars:   
+  SECRET_KEY=secret_key  
+  DEBUG=False  
+  - Create a new Heroku app: heroku create testimonials  
+  - Set the buildpack to Python: heroku buildpacks:set heroku/python  
+  - Link the Heroku app to the Github repository (https://github.com/JulianaZani/codeinstituteproject4)  
+  - Click on Deploy  
 
 ---
 
