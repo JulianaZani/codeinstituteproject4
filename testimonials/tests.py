@@ -3,9 +3,12 @@ from django.urls import reverse
 from .models import Testimonial
 from django.contrib.auth.models import User
 
+
 class TestimonialModelTest(TestCase):
     def setUp(self):
-        self.user = User.objects.create_user(username="testuser", password="password123")
+        self.user = User.objects.create_user(
+            username="testuser", password="password123"
+            )
         self.testimonial = Testimonial.objects.create(
             user=self.user,
             title="Great Experience",
@@ -15,9 +18,12 @@ class TestimonialModelTest(TestCase):
     def test_testimonial_str(self):
         self.assertEqual(str(self.testimonial), "Great Experience")
 
+
 class TestimonialViewsTest(TestCase):
     def setUp(self):
-        self.user = User.objects.create_user(username="testuser", password="password123")
+        self.user = User.objects.create_user(
+            username="testuser", password="password123"
+            )
         self.client.login(username="testuser", password="password123")
 
     def test_testimonial_list_view(self):
