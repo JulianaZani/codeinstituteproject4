@@ -49,30 +49,41 @@ On the homepage, visitors are invited to join the community. They can view testi
 
 Predominant colors:  
 
-#ffffff → pure white (RGB 255, 255, 255)  
+- #ffffff → pure white (RGB 255, 255, 255);  
 
-#f9f9f9 → a slightly grayish white (RGB 249, 249, 249)  
+- #f9f9f9 → a slightly grayish white (RGB 249, 249, 249);  
 
 Colors to contrast:
 
-#0d1b4c → navy blue (RGB 13, 27, 76)
+- #0d1b4c → navy blue (RGB 13, 27, 76);
 
 ![navycolor](doc/screenshots/colornavy.png)
 
 
-#ffdd57 → yellow (RGB 255, 221, 87) 
+- #ffdd57 → yellow (RGB 255, 221, 87); 
 
 ![yellowcolor](doc/screenshots/coloryellow.png)
 
 
-#555555 → dark grey (RGB 85, 85, 85)  
+- #555555 → dark grey (RGB 85, 85, 85);  
 
 
 ![initialpage](doc/screenshots/00initialpage.png)
 
-By clicking Read more, the visitor/user continues to view the links to navigate the site. They see the author of the testimonial, the title, the full comment, the image, the post date, and the return link.
+By clicking Read more, the visitor/user continues to view the links to navigate the site. They see the author of the testimonial, the title, the full comment, the image, the post date, and the return link.  
 
-![detailtestimonialpage](doc/screenshots/01detailtestimonialpage.png)
+![detailtestimonialpage](doc/screenshots/01detailtestimonialpage.png)  
+
+
+
+![loginpage](doc/screenshots/02login.png)  
+
+![signuppage](doc/screenshots/03signup.png)  
+
+![contactpage](doc/screenshots/04contact.png)  
+
+
+Characteristics regarding the pages that logged-in users access are demonstrated in [CRUD Functionality](#crud-functionality).
 
 ---
 
