@@ -12,19 +12,22 @@ This project was a real challenge for me. For most of the post-third project per
 ## 📑 Table of Contents
 
 1. [Purpose](#purpose)
-2. [Target Users](#target-users)
-3. [User Stories](#user-stories)
-4. [Wireframes](#wireframes)
-5. [Technologies Used](#technologies-used)
-6. [Data Schema](#data-schema)
-7. [CRUD Functionality](#crud-functionality)
-8. [Testing](#testing)
+2. [Features](#features)
+3. [Target Users](#target-users)
+4. [User Stories](#user-stories)
+5. [Wireframes](#wireframes)
+6. [Technologies Used](#technologies-used)
+7. [Data Schema](#data-schema)
+8. [CRUD Functionality](#crud-functionality)
+9. [Testing](#testing)
    - [Responsiveness](#responsiveness)
    - [W3C HTML Validator](#w3c-html-validator)
    - [W3C CSS Validator](#w3c-css-validator)
    - [Accessibility](#accessibility)
-9. [Deployment](#deployment)
-10. [Credits](#credits)
+     - [Wave](#wave)  
+     - [Lighthouse](#lighthouse)
+10. [Deployment](#deployment)
+11. [Credits](#credits)
 
 ---
 
@@ -36,6 +39,22 @@ The purpose of this application is to:
 - Provide a platform for users to submit testimonials about volunteering experiences
 - Allow visitors to read and get inspired by others’ stories
 - Enable administrators to manage, approve, or remove testimonials
+
+---
+
+## Features  
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)  
+
+On the homepage, visitors are invited to join the community. They can view testimonials, and by clicking Read More, they can read the testimonial details. The Home, Login, Sign Up, and Contact links are clearly located, centered just below the HopeBridge Community header.  
+Predominant colors:  
+Color to stand out:  
+
+
+![initialpage](doc/screenshots/00initialpage.png)
+
+By clicking Read more, the visitor/user continues to view the links to navigate the site. They see the author of the testimonial, the title, the full comment, the image, the post date, and the return link.
+
+![detailtestimonialpage](doc/screenshots/01detailtestimonialpage.png)
 
 ---
 
@@ -154,23 +173,23 @@ Delete – Logged-in users can delete a testimonial they created.
 
 ### Responsiveness
 
-The HopeBridge community website is fully responsive and adapts to all screen sizes, from mobile devices to large desktops.
-
-**Examples**
+The HopeBridge community website is fully responsive and adapts to all screen sizes, from mobile devices to large desktops.  
 
 ![responsiveness01](doc/screenshots/responsiveness01.png)
 
+**Examples**  
+
 - Screen size - 768x1024:  
 
-![responsiveness768](doc/screenshots/responsiveness02.png)
+![responsiveness768](doc/screenshots/responsiveness02.png)  
 
-- Screen size - 324x726:
+- Screen size - 324x726:  
 
-![responsiveness324](doc/screenshots/responsiveness03.png)
+![responsiveness324](doc/screenshots/responsiveness03.png)  
 
-- Screen size - 2000x1347
+- Screen size - 2000x1347  
 
-![responsiveness04](doc/screenshots/responsiveness04.png)
+![responsiveness04](doc/screenshots/responsiveness04.png)  
 
 
 ### W3C HTML Validator  
@@ -244,7 +263,7 @@ No errors were found when passing through the official (Jigsaw) validator.
 
 I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools and Wave Evolution Tool.  
 
-**WAVE**  
+#### Wave  
 
 - Initial page: https://testimonials-aeb7081fc7ea.herokuapp.com/  
 
@@ -283,7 +302,7 @@ I confirmed that the colors and fonts chosen are easy to read and accessible by 
 ![wave10testimonialdeletepage](doc/screenshots/wave10.png)  
 
 
-**LIGHTHOUSE**  
+#### Lighthouse  
 
 **Pages that had no problems:**  
 
