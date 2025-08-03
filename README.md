@@ -9,7 +9,27 @@ This project was a real challenge for me. For most of the post-third project per
 
 ---
 
+## 📑 Table of Contents
+
+1. [Purpose](#purpose)
+2. [Target Users](#target-users)
+3. [User Stories](#user-stories)
+4. [Wireframes](#wireframes)
+5. [Technologies Used](#technologies-used)
+6. [Data Schema](#data-schema)
+7. [CRUD Functionality](#crud-functionality)
+8. [Testing](#testing)
+   - [Responsiveness](#responsiveness)
+   - [W3C HTML Validator](#w3c-html-validator)
+   - [W3C CSS Validator](#w3c-css-validator)
+   - [Accessibility](#accessibility)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
+
+---
+
 ## Purpose
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
 The purpose of this application is to:
 
