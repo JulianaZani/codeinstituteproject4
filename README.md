@@ -143,16 +143,40 @@ Below are the user stories defined for the project:
 ## Technologies Used  
 [▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
-- **Python 3**
-- **Django 5**
-- **HTML5 / CSS3**
-- **JavaScript**
-- **SQLite (development)**
-- **PostgreSQL (production)**
-- **Cloudinary**
-- **Heroku**
-- **Git & GitHub**
-- **GitHub Projects**
+Languages & Frameworks  
+- Python 3.x – Main backend programming language
+
+- Django 5.2.4 – Full-stack web framework
+
+- HTML5, CSS3, and JavaScript – Structure, styling, and interactivity for the frontend
+
+Database  
+- SQLite – Database used in the development environment
+
+- PostgreSQL – Database used in production (Heroku)
+
+Storage & Media  
+- Cloudinary – Image hosting and optimization
+
+- dj3-cloudinary-storage – Integration between Django and Cloudinary
+
+Servers & Deployment  
+- Heroku – Hosting for the production environment
+
+- Gunicorn – WSGI server for Django applications
+
+- Whitenoise – Serving static files in production
+
+Dependencies & Utilities  
+- Pillow – Image manipulation for Django
+
+- dj-database-url – Simplified database configuration with environment variables
+
+- psycopg2-binary – PostgreSQL driver for Python/Django
+
+- Requests – For making HTTP requests when needed
+
+- asgiref, sqlparse, tzdata – Internal Django dependencies  
 
 ---
 
