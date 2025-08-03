@@ -121,7 +121,12 @@ Below on the right side is the link to the Login page.
 
 ![resetpasswordmsgpage](doc/screenshots/06resetpasswordmsg.png)  
 
-Characteristics regarding the pages that logged-in users access are demonstrated in [CRUD Functionality](#crud-functionality).  
+On the password change page, there are the following fields to fill in: _Old password; _New password; _New password confirmation.
+Information is provided to correctly enter the password. Below, the user has the "Change Password" button.  
+
+![changepasswordpage](doc/screenshots/07changepassword.png)
+
+Features related to pages accessed by logged-in users, in relation to sending, editing and deleting testimonials, are demonstrated in [CRUD Functionality](#crud-functionality).  
 
 
 ---
