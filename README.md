@@ -494,10 +494,13 @@ alt="Photo for {{ testimonial.title }}"loading="lazy">).
 ## Credits
 [▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
-images source
-https://itoldya420.getarchive.net/amp/media/coast-guard-station-crew-visits-nursing-facility-for-valentines-day-dvids1094304-583d1b
-https://www.streetlab.org/2018/08/28/making-a-place-for-learning-at-nyc-play-streets/
-https://www.flickr.com/photos/adamthelibrarian/14693926095
-https://cura.org.au/
+All of Code Institute's classes (from the beginning to the present) have been the foundation of my learning (although I completely forgot about the Django AllAuth classes and did so much manually).
+I conducted research using: chatGPT, YouTube, Google, and GitHub.
+The content of the testimonials was created by me based on my experiences with some social activities I engaged in throughout my life while living in Brazil.
+I found the images on Google Images (I chose the Creative Commons licensed search engine) to complement the testimonials:
+images source: 
+https://itoldya420.getarchive.net/amp/media/coast-guard-station-crew-visits-nursing-facility-for-valentines-day-dvids1094304-583d1b  
+https://www.streetlab.org/2018/08/28/making-a-place-for-learning-at-nyc-play-streets/  
+https://cura.org.au/  
 https://picryl.com/media/help-child-charity-people-908b3c
-https://aserghc.com.br/festa-das-criancas-reune-milhares-de-trabalhadores-e-suas-familias/
+https://aserghc.com.br/festa-das-criancas-reune-milhares-de-trabalhadores-e-suas-familias
