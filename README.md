@@ -12,8 +12,8 @@ This project was a real challenge for me. For most of the post-third project per
 ## 📑 Table of Contents
 
 1. [Purpose](#purpose)
-2. [Features](#features)
-3. [Target Users](#target-users)
+2. [Target Users](#target-users)
+3. [Features](#features)
 4. [User Stories](#user-stories)
 5. [Wireframes](#wireframes)
 6. [Technologies Used](#technologies-used)
@@ -29,6 +29,7 @@ This project was a real challenge for me. For most of the post-third project per
 10. [Deployment](#deployment)
 11. [Credits](#credits)
 
+
 ---
 
 ## Purpose
@@ -39,6 +40,30 @@ The purpose of this application is to:
 - Provide a platform for users to submit testimonials about volunteering experiences
 - Allow visitors to read and get inspired by others’ stories
 - Enable administrators to manage, approve, or remove testimonials
+
+
+---
+
+## Target Users  
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)
+
+The project was designed with the following user groups in mind:
+
+### General Visitors:
+- Browse published testimonials for inspiration  
+- View full details of each story  
+- Submit questions through a contact form  
+
+### Registered Users:
+- Create an account to share a testimonial  
+- Manage (edit or delete) their own testimonial  
+- Receive confirmation messages upon actions  
+
+### Admin Users:
+- Approve or reject **testimonials**    
+- Remove testimonials that do not meet the platform’s guidelines  
+- Receive contact form messages via email  
+
 
 ---
 
@@ -96,30 +121,8 @@ Below on the right side is the link to the Login page.
 
 ![resetpasswordmsgpage](doc/screenshots/06resetpasswordmsg.png)  
 
-
 Characteristics regarding the pages that logged-in users access are demonstrated in [CRUD Functionality](#crud-functionality).  
 
----
-
-## Target Users  
-[▲ Back to Top](#volunteer-testimonials---hopebridge-community)
-
-The project was designed with the following user groups in mind:
-
-### General Visitors:
-- Browse published testimonials for inspiration  
-- View full details of each story  
-- Submit questions through a contact form  
-
-### Registered Users:
-- Create an account to share a testimonial  
-- Manage (edit or delete) their own testimonial  
-- Receive confirmation messages upon actions  
-
-### Admin Users:
-- Approve or reject **testimonials**    
-- Remove testimonials that do not meet the platform’s guidelines  
-- Receive contact form messages via email  
 
 ---
 
@@ -143,6 +146,7 @@ Below are the user stories defined for the project:
 
 **Rule:** *Should Have* ≤ 60% 
 
+
 ---
 
 ## Wireframes  
@@ -151,6 +155,7 @@ Below are the user stories defined for the project:
 ![wireframes](doc/screenshots/wireframehomeandaddtestimonial.png)  
 
 ![wireframes](doc/screenshots/wireframelogincontact.png)
+
 
 ---
 
@@ -192,6 +197,7 @@ Dependencies & Utilities
 
 - asgiref, sqlparse, tzdata – Internal Django dependencies  
 
+
 ---
 
 ## Data Schema  
@@ -215,6 +221,7 @@ Dependencies & Utilities
 +--------------------+
 ```
 
+
 ---
 
 ## CRUD Functionality  
@@ -232,6 +239,7 @@ Update – Logged-in users can edit their testimonials via the "Edit" button.
 
 
 Delete – Logged-in users can delete a testimonial they created.  
+
 
 ---
 
@@ -318,6 +326,14 @@ Adjustment made: delete {{ testimonial.content|linebreaksbr }} "p" tags in testi
 
 ![w3c13testimonialdetail2after](doc/screenshots/w3c13.png)  
 
+- Password reset page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/password_reset/  
+
+![w3c14passwordresetpage](doc/screenshots/w3c14.png)  
+
+- Done password reset message page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/password_reset/done/  
+
+![w3c15passwordresetmessagepage](doc/screenshots/w3c15.png)  
+
 
 ### W3C CSS Validator  
 
@@ -368,6 +384,14 @@ I confirmed that the colors and fonts chosen are easy to read and accessible by 
 
 ![wave10testimonialdeletepage](doc/screenshots/wave10.png)  
 
+- Password reset page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/password_reset/  
+
+![wave11passwordresetpage](doc/screenshots/wave11.png)  
+
+- Done password reset message page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/password_reset/done/  
+
+![wave12passwordresetmessagepage](doc/screenshots/wave12.png)  
+
 
 #### Lighthouse  
 
@@ -400,6 +424,15 @@ I confirmed that the colors and fonts chosen are easy to read and accessible by 
 - Testimonial delete page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/delete/  
 
 ![lighthouse07testimonialdeletepage](doc/screenshots/lighthouse07.png)  
+
+- Password reset page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/password_reset/  
+
+![lighthouse14passwordresetpage](doc/screenshots/lighthouse14.png)  
+
+- Done password reset message page: https://testimonials-aeb7081fc7ea.herokuapp.com/accounts/password_reset/done/  
+
+![lighthouse15passwordresetmessagepage](doc/screenshots/lighthouse15.png)  
+
 
 **Pages that had problems:**
 
