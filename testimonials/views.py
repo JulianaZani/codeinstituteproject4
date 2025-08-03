@@ -4,18 +4,33 @@ from .forms import TestimonialForm, ContactForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
+
 def testimonial_list(request):
     testimonials = Testimonial.objects.filter(approved=True)
-    return render(request, 'testimonials/testimonial_list.html', {'testimonials': testimonials})
+    return render(
+        request,
+        'testimonials/testimonial_list.html',
+        {'testimonials': testimonials},
+    )
+
 
 def testimonial_detail(request, pk):
     testimonial = get_object_or_404(Testimonial, pk=pk)
 
-    if not testimonial.approved and testimonial.user != request.user and not request.user.is_staff:
+    if (
+        not testimonial.approved
+        and testimonial.user != request.user
+        and not request.user.is_staff
+    ):
         messages.error(request, "This testimonial is awaiting approval.")
         return redirect('testimonial_list')
 
-    return render(request, 'testimonials/testimonial_detail.html', {'testimonial': testimonial})
+    return render(
+        request,
+        'testimonials/testimonial_detail.html',
+        {'testimonial': testimonial},
+    )
+
 
 @login_required
 def add_testimonial(request):
@@ -26,11 +41,19 @@ def add_testimonial(request):
             testimonial.user = request.user
             testimonial.approved = False
             testimonial.save()
-            messages.success(request, 'Your testimonial was submitted and is awaiting approval.')
+            messages.success(
+                request,
+                'Your testimonial was submitted and is awaiting approval.',
+            )
             return redirect('testimonial_list')
     else:
         form = TestimonialForm()
-    return render(request, 'testimonials/add_testimonial.html', {'form': form})
+    return render(
+        request,
+        'testimonials/add_testimonial.html',
+        {'form': form},
+    )
+
 
 @login_required
 def edit_testimonial(request, pk):
@@ -40,17 +63,29 @@ def edit_testimonial(request, pk):
         return redirect('testimonial_list')
 
     if request.method == 'POST':
-        form = TestimonialForm(request.POST, request.FILES, instance=testimonial)
+        form = TestimonialForm(
+            request.POST,
+            request.FILES,
+            instance=testimonial,
+        )
         if form.is_valid():
             updated_testimonial = form.save(commit=False)
             updated_testimonial.approved = False
             updated_testimonial.save()
-            messages.info(request, 'Your testimonial was edited and is awaiting admin approval.')
+            messages.info(
+                request,
+                'Your testimonial was edited and is awaiting admin approval.',
+            )
             return redirect('testimonial_detail', pk=testimonial.pk)
     else:
         form = TestimonialForm(instance=testimonial)
 
-    return render(request, 'testimonials/add_testimonial.html', {'form': form, 'edit': True})
+    return render(
+        request,
+        'testimonials/add_testimonial.html',
+        {'form': form, 'edit': True},
+    )
+
 
 @login_required
 def delete_testimonial(request, pk):
@@ -61,10 +96,18 @@ def delete_testimonial(request, pk):
 
     if request.method == 'POST':
         testimonial.delete()
-        messages.success(request, 'Your testimonial was deleted successfully.')
+        messages.success(
+            request,
+            'Your testimonial was deleted successfully.',
+        )
         return redirect('testimonial_list')
 
-    return render(request, 'testimonials/testimonial_confirm_delete.html', {'testimonial': testimonial})
+    return render(
+        request,
+        'testimonials/testimonial_confirm_delete.html',
+        {'testimonial': testimonial},
+    )
+
 
 def contact_view(request):
     if request.method == 'POST':
@@ -72,7 +115,11 @@ def contact_view(request):
         if form.is_valid():
             messages.success(request, "Thank you for your message!")
             form = ContactForm()
-            return render(request, 'contact.html', {'form': form, 'success': True})
+            return render(
+                request,
+                'contact.html',
+                {'form': form, 'success': True},
+            )
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
