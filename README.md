@@ -74,14 +74,19 @@ By clicking Read more, the visitor/user continues to view the links to navigate 
 
 ![detailtestimonialpage](doc/screenshots/01detailtestimonialpage.png)  
 
-
+On the login page, you'll find username and password fields. A "Log In" button takes you to the home page after correct input. Below, you'll find links to change your password and sign up.  
 
 ![loginpage](doc/screenshots/02login.png)  
 
+On the Sign Up page, there are fields for creating an account: Username, Email, Password, information for creating a correct password, Password confirmation, a Register button, and a Log in link below (if the user is already registered).
+
 ![signuppage](doc/screenshots/03signup.png)  
+
+The Contact page is open to everyone. Anyone can freely contact the HopeBridge Community. The fields to fill out are: Name, Email, and Message. Below is the Send Message button.  
 
 ![contactpage](doc/screenshots/04contact.png)  
 
+Note: The back link on the right side at the bottom of the Login, Registration, Contact and Testimonial Details pages redirects the visitor/user to the home page.
 
 Characteristics regarding the pages that logged-in users access are demonstrated in [CRUD Functionality](#crud-functionality).
 
@@ -202,7 +207,6 @@ Dependencies & Utilities
 ```
 
 ---
-
 
 ## CRUD Functionality  
 [▲ Back to Top](#volunteer-testimonials---hopebridge-community) 
