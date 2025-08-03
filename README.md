@@ -46,8 +46,26 @@ The purpose of this application is to:
 [▲ Back to Top](#volunteer-testimonials---hopebridge-community)  
 
 On the homepage, visitors are invited to join the community. They can view testimonials, and by clicking Read More, they can read the testimonial details. The Home, Login, Sign Up, and Contact links are clearly located, centered just below the HopeBridge Community header.  
+
 Predominant colors:  
-Color to stand out:  
+
+#ffffff → pure white (RGB 255, 255, 255)  
+
+#f9f9f9 → a slightly grayish white (RGB 249, 249, 249)  
+
+Colors to contrast:
+
+#0d1b4c → navy blue (RGB 13, 27, 76)
+
+![navycolor](doc/screenshots/colornavy.png)
+
+
+#ffdd57 → yellow (RGB 255, 221, 87) 
+
+![yellowcolor](doc/screenshots/coloryellow.png)
+
+
+#555555 → dark grey (RGB 85, 85, 85)  
 
 
 ![initialpage](doc/screenshots/00initialpage.png)
