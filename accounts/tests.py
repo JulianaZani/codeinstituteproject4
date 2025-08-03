@@ -2,9 +2,12 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
 
+
 class AccountsViewsTest(TestCase):
     def setUp(self):
-        self.user = User.objects.create_user(username="testuser", password="password123")
+        self.user = User.objects.create_user(
+            username="testuser", password="password123"
+            )
 
     def test_signup_page_loads(self):
         response = self.client.get(reverse('signup'))
