@@ -39,7 +39,8 @@ The purpose of this application is to:
 
 ---
 
-## Target Users
+## Target Users  
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
 The project was designed with the following user groups in mind:
 
@@ -60,7 +61,8 @@ The project was designed with the following user groups in mind:
 
 ---
 
-## User Stories
+## User Stories  
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
 User stories were planned and tracked using the [GitHub Projects Board](<https://github.com/users/JulianaZani/projects/1/views/1?layout=board>).  
 
@@ -81,7 +83,8 @@ Below are the user stories defined for the project:
 
 ---
 
-## Wireframes
+## Wireframes  
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
 ![wireframes](doc/screenshots/wireframehomeandaddtestimonial.png)  
 
@@ -89,7 +92,8 @@ Below are the user stories defined for the project:
 
 ---
 
-## Technologies Used
+## Technologies Used  
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
 - **Python 3**
 - **Django 5**
@@ -105,6 +109,7 @@ Below are the user stories defined for the project:
 ---
 
 ## Data Schema  
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community) 
 
 **ER Diagram**  
 
@@ -127,6 +132,7 @@ Below are the user stories defined for the project:
 
 
 ## CRUD Functionality  
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community) 
 
 The project implements full CRUD functionality for testimonials:  
 
@@ -144,6 +150,7 @@ Delete – Logged-in users can delete a testimonial they created.
 ---
 
 ## Testing
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
 ### Responsiveness
 
@@ -316,14 +323,14 @@ I confirmed that the colors and fonts chosen are easy to read and accessible by 
 
 ![lighthouse08initialpagebefore](doc/screenshots/lighthouse08.png)  
 
-Mixed Content Error.
-To fix the Mixed Content issue and force all Cloudinary images to be uploaded using HTTPS, I set secure=True in cloudinary.config and adjusted the MEDIA_URL (MEDIA_URL = f'https://res.cloudinary.com/{cloudinary.config().cloud_name}/image/upload/').
+Mixed Content Error.  
+To fix the Mixed Content issue and force all Cloudinary images to be uploaded using HTTPS, I set secure=True in cloudinary.config and adjusted the MEDIA_URL (MEDIA_URL = f'https://res.cloudinary.com/{cloudinary.config().cloud_name}/image/upload/').  
 
 Console showing errors:  
 
 ![console01](doc/screenshots/console01.png)  
 
-**AFTER**
+**AFTER**  
 
 ![lighthouse09initialpageafter](doc/screenshots/lighthouse09.png) 
 
@@ -334,13 +341,13 @@ Console showing errors:
 ![lighthouse11initialpage](doc/screenshots/lighthouse11.png)  
 
 
-- Testimonial detail page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/
+- Testimonial detail page: https://testimonials-aeb7081fc7ea.herokuapp.com/testimonial/13/  
 
 **BEFORE**  
 
 ![lighthouse12testimonialdetailpage](doc/screenshots/lighthouse12.png)  
 
-ERRORS:
+ERRORS:  
 ![errors01](doc/screenshots/errors01.png)
 
 To fix the error I created templatetags/ cloudinary_filters.py and updated the image tag in testimonial_detail.html (src="{{ testimonial.image.url|cloudinary_optimize }}"
@@ -353,7 +360,8 @@ alt="Photo for {{ testimonial.title }}"loading="lazy">).
 
 ---
 
-## Deployment  
+## Deployment
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)  
 
 - Steps for deployment:
 
@@ -365,6 +373,7 @@ alt="Photo for {{ testimonial.title }}"loading="lazy">).
 ---
 
 ## Credits
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
 images source
 https://itoldya420.getarchive.net/amp/media/coast-guard-station-crew-visits-nursing-facility-for-valentines-day-dvids1094304-583d1b
