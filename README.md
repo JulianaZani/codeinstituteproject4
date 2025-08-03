@@ -83,12 +83,21 @@ On the Sign Up page, there are fields for creating an account: Username, Email, 
 ![signuppage](doc/screenshots/03signup.png)  
 
 The Contact page is open to everyone. Anyone can freely contact the HopeBridge Community. The fields to fill out are: Name, Email, and Message. Below is the Send Message button.  
+Note: The back link on the right side at the bottom of the Login, Registration, Contact and Testimonial Details pages redirects the visitor/user to the home page.  
 
 ![contactpage](doc/screenshots/04contact.png)  
 
-Note: The back link on the right side at the bottom of the Login, Registration, Contact and Testimonial Details pages redirects the visitor/user to the home page.
+To reset your password, the Reset Password page has a field for entering your email address and below it, the "Send Reset Link" button. On the bottom right, there's a link to return to the login page.  
 
-Characteristics regarding the pages that logged-in users access are demonstrated in [CRUD Functionality](#crud-functionality).
+![resetpasswordpage](doc/screenshots/05resetpassword.png)  
+
+After the visitor/user sends the email to reset their password, a page opens with the message: Password Reset Sent. If an account exists with the email you entered, you will receive a password reset link shortly. Please check your email.  
+Below on the right side is the link to the Login page.  
+
+![resetpasswordmsgpage](doc/screenshots/06resetpasswordmsg.png)  
+
+
+Characteristics regarding the pages that logged-in users access are demonstrated in [CRUD Functionality](#crud-functionality).  
 
 ---
 
