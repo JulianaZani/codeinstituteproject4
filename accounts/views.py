@@ -4,6 +4,7 @@ from django.contrib.auth import login
 from django.contrib.auth.views import LoginView
 from django.contrib import messages
 
+
 def signup_view(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -15,5 +16,7 @@ def signup_view(request):
     else:
         form = SignUpForm()
     return render(request, 'accounts/signup.html', {'form': form})
+
+
 class CustomLoginView(LoginView):
     template_name = 'accounts/login.html'
