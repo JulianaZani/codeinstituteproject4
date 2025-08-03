@@ -29,7 +29,8 @@ This project was a real challenge for me. For most of the post-third project per
      - [Wave](#wave)  
      - [Lighthouse](#lighthouse)
 10. [Deployment](#deployment)
-11. [Credits](#credits)
+11. [Security](#security)
+12. [Credits](#credits)
 
 
 ---
@@ -612,6 +613,32 @@ alt="Photo for {{ testimonial.title }}"loading="lazy">).
   - Set the buildpack to Python: heroku buildpacks:set heroku/python  
   - Link the Heroku app to the Github repository (https://github.com/JulianaZani/codeinstituteproject4)  
   - Click on Deploy  
+
+---
+
+## Security
+
+This project follows good security practices to protect passwords, tokens, and secret keys:  
+
+- Environment Variables (.env)  
+
+Sensitive information, such as:  
+Django's SECRET_KEY  
+DATABASE_URL  
+CLOUDINARY_URL  
+
+These are stored in an .env file, which is not committed to Git.
+
+- .gitignore  
+
+The .env file is listed in .gitignore, ensuring that it is not committed to the public repository.  
+
+- Secure Variable Loading  
+
+During local development, variables are loaded via env.py.  
+
+In production (Heroku), these variables are defined in the platform's environment variables panel.
+
 
 ---
 
