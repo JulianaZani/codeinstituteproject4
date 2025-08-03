@@ -374,11 +374,11 @@ No errors were found when passing through the official (Jigsaw) validator.
 ![w3ccss](doc/screenshots/w3ccss.png)
 
 
-### JSHint
+### JSHint  
 
-Script.js
+Script.js:  
 
-
+![jshint](doc/screenshots/jshint.png)  
 
 
 ### PEP8  
