@@ -7,6 +7,7 @@ The site is designed with accessibility and user experience in mind, following m
 **Project Journey**  
 This project was a real challenge for me. For most of the post-third project period, I had to work longer hours at my job, which left me with very limited time to study. It was only towards the end that my workload at the company decreased, allowing me to dedicate more time to completing the project. There were many moments when I almost gave up. Thank you, and I apologize for any rough edges!
 
+
 ---
 
 ## 📑 Table of Contents
@@ -30,7 +31,8 @@ This project was a real challenge for me. For most of the post-third project per
      - [Lighthouse](#lighthouse)
 10. [Deployment](#deployment)
 11. [Security](#security)
-12. [Credits](#credits)
+12. [Bugs](#bugs)
+13. [Credits](#credits)
 
 
 ---
@@ -614,9 +616,11 @@ alt="Photo for {{ testimonial.title }}"loading="lazy">).
   - Link the Heroku app to the Github repository (https://github.com/JulianaZani/codeinstituteproject4)  
   - Click on Deploy  
 
+
 ---
 
 ## Security
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
 This project follows good security practices to protect passwords, tokens, and secret keys:  
 
@@ -638,6 +642,18 @@ The .env file is listed in .gitignore, ensuring that it is not committed to the 
 During local development, variables are loaded via env.py.  
 
 In production (Heroku), these variables are defined in the platform's environment variables panel.
+
+
+---
+
+## Bugs
+[▲ Back to Top](#volunteer-testimonials---hopebridge-community)
+
+In addition to the issues resolved and presented in the README development, I also encountered these:  
+- Error 500 (Internal Server Error). I added the TestimonialForm to forms.py and it finally worked.
+- When trying to log in: Page not found (404). I hadn't set LOGIN_REDIRECT_URL in the settings.
+- When logging in, writing the testimonial, choosing the image, and clicking submit, I got this error: ValueError: Must supply api_key. I adjusted the cloudinary.config in settings.py and CLOUDINARY_URL in Heroku, and the site was able to accept testimonials with images.
+- Error: Syntax problem in the template (testimonial_detail.html). I fixed the syntax by removing the parentheses that were there incorrectly, and it worked again.
 
 
 ---
