@@ -354,6 +354,9 @@ After delete confirmation a delete confirmation message appears.
 [▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
 - I tested this website's functionality in multiple browsers: Chrome, Safari, Microsoft Edge, and Firefox.
+- I tested the site by registering several users.  
+- Logged in as any user, I tested the implementation of testimonials, edits, and deletions.  
+- Logged in as an administrator, I was able to monitor the testimonials.  
 - I confirmed that this project is responsive, looks good, and works on all standard screen sizes using the Device DevTools toolbar.
 - I confirmed that the colors and fonts I chose are easy to read and accessible by running it in Wave and Lighthouse DevTools.
 - The project is available online at https://testimonials-aeb7081fc7ea.herokuapp.com/
