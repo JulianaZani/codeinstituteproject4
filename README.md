@@ -740,7 +740,7 @@ In addition to the issues resolved and presented in the README development, I al
 
 - All of Code Institute's classes (from the beginning to the present) have been the foundation of my learning (although I completely forgot about the Django AllAuth classes and did so much manually).
 - I conducted research using: chatGPT, YouTube, Google, GitHub and Copilot.
-The content of the testimonials was created by me based on my experiences with some social activities I engaged in throughout my life while living in Brazil.
+- The content of the testimonials was created by me based on my experiences with some social activities I engaged in throughout my life while living in Brazil.
 - I found the images on Google Images (I chose the Creative Commons licensed search engine) to complement the testimonials:  
 https://itoldya420.getarchive.net/amp/media/coast-guard-station-crew-visits-nursing-facility-for-valentines-day-dvids1094304-583d1b  
 https://www.streetlab.org/2018/08/28/making-a-place-for-learning-at-nyc-play-streets/  
