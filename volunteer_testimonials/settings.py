@@ -15,10 +15,10 @@ if os.path.isfile('env.py'):
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Secret key
-SECRET_KEY = os.environ.get('SECRET_KEY', 'your-secret-key')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # Debug
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'testimonials-aeb7081fc7ea.herokuapp.com',
