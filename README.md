@@ -143,9 +143,79 @@ Features related to pages accessed by logged-in users, in relation to sending, e
 
 User stories were planned and tracked using the [GitHub Projects Board](<https://github.com/users/JulianaZani/projects/1/views/1?layout=board>).  
 
+All user stories have been successfully implemented.
+
 Below are the user stories defined for the project:  
 
-![userstories](doc/screenshots/userstories.png)
+![userstories](doc/screenshots/userstories.png)  
+
+View Testimonials #1  
+As a visitor, I want to view testimonials, so I can feel inspired to get involved.   
+Acceptance Criteria:  
+I can see a list of published testimonials on the homepage or a testimonial page.  
+Each testimonial shows the name, short message, and optionally a photo.  
+I can read the full testimonial if I click on it.  
+
+Register an Account #2  
+As a visitor, I want to register an account, so I can submit my testimonial.  
+Acceptance Criteria:  
+I can sign up with a username, password, and optional email.  
+After registering, I’m redirected or logged in automatically.  
+I see a confirmation message when my account is created.  
+
+Login to My Account #3    
+As a registered user, I want to log in, so I can submit and manage my testimonials.  
+Acceptance Criteria:  
+I can log in using my username and password.  
+I’m redirected to the homepage or dashboard after login.  
+A message confirms that I am logged in.  
+
+Comment: After login, I can see my username on the homepage, confirming I am logged in.  
+
+Submit a Testimonial #4  
+As a logged-in user, I want to submit a testimonial, so I can share my experience with others.  
+Acceptance Criteria:  
+I see a form to submit my name, testimonial message, and optional image.  
+The form validates required fields and shows feedback if something is missing.  
+I get a message confirming that the testimonial was submitted.  
+The testimonial goes to "pending" status (not live immediately).  
+
+Edit My Testimonial #5  
+As a logged-in user, I want to edit my own testimonial, so I can fix errors or update it.  
+Acceptance Criteria:  
+I can see a list of my submitted testimonials.  
+I can edit any testimonial I created.  
+I get confirmation after saving changes.  
+
+Delete My Testimonial #6  
+As a logged-in user, I want to delete my testimonial, so I can remove it if I no longer want it public.  
+Acceptance Criteria:  
+I can delete my own testimonial from a list or detail view.  
+I get a confirmation prompt before deletion.  
+A success message confirms removal.  
+
+Admin Approval #7    
+As a site admin, I want to approve or reject both new and edited testimonials, so I can ensure content quality is maintained.  
+Acceptance Criteria:  
+When a testimonial is submitted or edited, it is marked as pending.  
+I can view all pending testimonials (new or edited) in the admin panel.  
+I can choose to approve or reject each one.  
+Only approved testimonials are visible on the site.  
+Rejected testimonials remain hidden from public view.  
+
+Contact Form #8    
+As a visitor, I want to contact the organization, so I can ask questions or offer to help.  
+Acceptance Criteria:  
+A contact form is available with name, email, and message fields.  
+I receive a confirmation after sending a message.  
+The message is emailed to the admin.    
+
+Responsive Design #9    
+As a user, I want the site to be responsive, so I can access it from any device.  
+Acceptance Criteria:  
+The layout adapts to mobile, tablet, and desktop screens.  
+All buttons, forms, and content remain functional and readable.  
+Navigation is usable on all screen sizes.  
 
 ### MoSCoW Prioritization
 
@@ -668,11 +738,10 @@ In addition to the issues resolved and presented in the README development, I al
 ## Credits
 [▲ Back to Top](#volunteer-testimonials---hopebridge-community)
 
-All of Code Institute's classes (from the beginning to the present) have been the foundation of my learning (although I completely forgot about the Django AllAuth classes and did so much manually).
-I conducted research using: chatGPT, YouTube, Google, and GitHub.
+- All of Code Institute's classes (from the beginning to the present) have been the foundation of my learning (although I completely forgot about the Django AllAuth classes and did so much manually).
+- I conducted research using: chatGPT, YouTube, Google, GitHub and Copilot.
 The content of the testimonials was created by me based on my experiences with some social activities I engaged in throughout my life while living in Brazil.
-I found the images on Google Images (I chose the Creative Commons licensed search engine) to complement the testimonials:
-images source: 
+- I found the images on Google Images (I chose the Creative Commons licensed search engine) to complement the testimonials:  
 https://itoldya420.getarchive.net/amp/media/coast-guard-station-crew-visits-nursing-facility-for-valentines-day-dvids1094304-583d1b  
 https://www.streetlab.org/2018/08/28/making-a-place-for-learning-at-nyc-play-streets/  
 https://cura.org.au/  
