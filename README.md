@@ -2,7 +2,9 @@
 
 **Volunteer Testimonials** is a full-stack web application built with Django. It allows users to share and read real-life stories about their experiences participating in social and volunteering projects. The name **HopeBridge Community** was not chosen at the beginning of the project.
 
-The site is designed with accessibility and user experience in mind, following modern development practices using HTML, CSS, JavaScript, Python, and Django.  
+The site is designed with accessibility and user experience in mind, following modern development practices using HTML, CSS, JavaScript, Python, and Django.    
+The project is available online at:  
+[https://testimonials-aeb7081fc7ea.herokuapp.com/](https://testimonials-aeb7081fc7ea.herokuapp.com/)  
 
 **Project Journey**  
 This project was a real challenge for me. For most of the post-third project period, I had to work longer hours at my job, which left me with very limited time to study. It was only towards the end that my workload at the company decreased, allowing me to dedicate more time to completing the project. There were many moments when I almost gave up. Thank you, and I apologize for any rough edges!
@@ -280,6 +282,11 @@ After delete confirmation a delete confirmation message appears.
 
 ## Testing
 [▲ Back to Top](#volunteer-testimonials---hopebridge-community)
+
+- I tested this website's functionality in multiple browsers: Chrome, Safari, Microsoft Edge, and Firefox.
+- I confirmed that this project is responsive, looks good, and works on all standard screen sizes using the Device DevTools toolbar.
+- I confirmed that the colors and fonts I chose are easy to read and accessible by running it in Wave and Lighthouse DevTools.
+- The project is available online at https://testimonials-aeb7081fc7ea.herokuapp.com/
 
 ### Responsiveness
 
